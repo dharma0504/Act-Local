@@ -1,0 +1,355 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa;
+  color: #2e3b4e;
+}
+
+/* Dashboard Container */
+.dashboardContainer {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1f2a38;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 20px 0;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Content Area */
+.content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 40px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Profile Box */
+.profileBox {
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Profile Section */
+.profileSection {
+  margin-bottom: 40px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileInfo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profileInfo p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.statCard h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.statCard p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Requests Section */
+.requests {
+  margin-bottom: 40px;
+}
+
+.requests h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.requestList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.requestCard {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.requestCard:hover {
+  transform: translateY(-5px);
+}
+
+.requestCard h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.requestCard p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Posts Section */
+.posts {
+  margin-bottom: 40px;
+}
+
+.posts h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.newPost {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.newPost textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.newPost button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newPost button:hover {
+  background-color: #2980b9;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.postCard {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.postCard button {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.postCard button:hover {
+  color: #c0392b;
+}
+
+.postCard textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.postCard button {
+  margin-top: 10px;
+}
+
+
+/* General Button Styling */
+button {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Save Button */
+button.save {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+button.save:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Cancel Button */
+button.cancel {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+button.cancel:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Edit Button */
+button.edit {
+  background-color: #2196f3; /* Blue */
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+button.delete {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #fb8c00;
+  transform: scale(1.05);
+}
+
+/* Disable hover and pointer for disabled buttons */
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Add spacing for better layout */
+.postCard button,
+.profileInfo button {
+  margin-right: 10px;
+}
